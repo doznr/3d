@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/threeJS-TXT.css">
+    <link rel="stylesheet" href="./css/searchBar-animation.css">
+    <link rel="stylesheet" href="./css/scrollAni.css">
+    <link rel="stylesheet" href="./css/iconHover.css">
+    <link rel="stylesheet" href="./css/card.css">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+        integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/model.js" type="module" defer></script>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="social on">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-codepen"></i>
+        </div>
+
+        <div class="video_wrap">
+            <video autoplay muted loop poster="./images/poster.jpg">
+                <source src="./video/video.mp4" type="video/mp4"></video>
+        </div>
+        <div class="videoText">
+            <p>우당탕탕 MZ세대</p>
+            <h1>요즘것들<br>사생활</h1>
+            <h2></h2>
+        </div>
+
+
+
+        <section class="sec1">
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="키워드를 검색해 보세요.">
+            </div>
+            <div class="searchTXT">
+                <div><a href="#n">
+                        내집마련 </a></div>
+                <span>ㅣ</span>
+                <div><a href="#n">
+                        주택청약 </a></div>
+                <span>ㅣ</span>
+                <div><a href="#n">
+                        재테크 </a></div>
+                <span>ㅣ</span>
+                <div><a href="#n">
+                        청년정책</a></div>
+            </div>
+
+            <div class="cards">
+                <div class="card1 card">
+                    <div class="front-face1 front">
+                    </div>
+
+                    <div class="back-face1 back"><a href="#n">
+                        자세히보기
+                    </a>
+                    </div>
+                </div>
+
+                <div class="card2 card">
+                    <div class="front-face2 front">
+                    </div>
+
+                    <div class="back-face2 back"><a href="#n">
+                        자세히보기
+                    </a>
+                    </div>
+                </div>
+
+                <div class="card3 card">
+                    <div class="front-face3 front">
+                    </div>
+
+                    <div class="back-face3 back"><a href="#n">
+                        자세히보기
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec2">
+
+
+            <div id="canvasWrap">
+                <!-- <button type="button" class="button" onclick="
+                document.querySelector('.text').style.transform='translateX(-700px)';
+                "> -->
+
+                <button type="button" id="button">
+                    camera move</button>
+                <div class="text">
+                    <p class="text1">3D 모델링을 통한</p>
+                    <p class="text2">메타버스 세계관</p>
+                    <p class="text3">국비 무료교육</p>
+                    <br>
+                    <p class="detail"><a href="#n">자세히 보러가기</a></p>
+                </div>
+            </div>
+
+
+
+        </section>
+        <div class="scroll-down"></div>
+    </div>
+
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        const text1 = document.querySelector('.text1');
+        const text2 = document.querySelector('.text2');
+        const text3 = document.querySelector('.text3');
+        const detail = document.querySelector('.detail');
+        const button = document.getElementById('button');
+        button.onclick = function () {
+            text1.classList.toggle('active')
+            text2.classList.toggle('active')
+            text3.classList.toggle('active')
+            detail.classList.toggle('active')
+        }
+
+        $(function () {
+            $(window).scroll(function () {
+                var location = $(this).scrollTop().toFixed(0) //<<.toFixed는 소숫점 고정(없애)시켜주는거
+                //   var=변수값
+                // alert(location)
+
+                if (location >= $('.video_wrap').offset().top  ) {
+                    $('.social').addClass('on')
+                }
+                if( location > 800 ) {
+                    $('.social').removeClass('on')
+                }
+            })
+
+        })
+    </script>
+
+</body>
+
+</html>

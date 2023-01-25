@@ -1,0 +1,47 @@
+@charset "utf-8";
+*{padding: 0; margin: 0;}
+.social{
+    top: 50%;
+    right: 20px;
+    transform: translate(0, -50%);
+    z-index: 1000;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.social>i{
+    margin: auto 25px;
+    cursor: pointer;
+    color: rgb(185, 185, 185);
+    font-size: 1.5rem;
+    transition: 0.5s;
+    padding-bottom: 20px;
+}
+
+
+/* 소셜 부분에 호버 했을 때 i는 호버가 안된다는 말 */
+.social:hover .social>i:not(:hover){
+    opacity: 0.1;
+}
+
+
+.social>i:hover{
+    transform: translateY(-10px);
+    color: black;
+}
+
+.social.on i{
+    color: white;
+}
+.social.on>i:hover{
+    color: black;
+}
+input:focus{
+    outline: none;
+}
+input::placeholder{
+color:white;
+font-size: 14px;
+}

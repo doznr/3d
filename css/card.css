@@ -1,0 +1,179 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'RixYeoljeongdo_Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/RixYeoljeongdo_Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sec1 {
+    padding-top: 150px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.cards {
+    display: flex;
+}
+
+.card,
+.front,
+.back {
+    position: relative;
+    margin-right: 30px;
+    margin-top: 20px;
+
+}
+
+.card1 {
+    width: 384px;
+    height: 626px;
+    /* top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%); */
+    transform-style: preserve-3d;
+    perspective: 10000px;
+}
+
+.front-face1 {
+    height: 100%;
+    width: 100%;
+    background-image: url("../images/01.card/01.png");
+    background-size: cover;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    position: absolute;
+    transition: transform 0.2s cubic-bezier(0.4, 0.2, 0.2, 1);
+    border-radius: 45px;
+}
+
+.back-face1 {
+    height: 100%;
+    width: 100%;
+    background-image: url("../images/01.card/01b.png");
+    background-size: cover;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    position: absolute;
+    transition: transform 0.2s cubic-bezier(0.4, 0.2, 0.2, 1);
+    border-radius: 45px;
+}
+
+.back-face2 {
+    height: 100%;
+    width: 100%;
+    background-image: url("../images/01.card/02b.png");
+    background-size: cover;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    position: absolute;
+    transition: transform 0.2s cubic-bezier(0.4, 0.2, 0.2, 1);
+    border-radius: 45px;
+}
+
+.back-face3 {
+    height: 100%;
+    width: 100%;
+    background-image: url("../images/01.card/03b.png");
+    background-size: cover;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    position: absolute;
+    transition: transform 0.2s cubic-bezier(0.4, 0.2, 0.2, 1);
+    border-radius: 45px;
+}
+
+.back-face1 a,
+.back-face2 a,
+.back-face3 a {
+    border: 3px solid white;
+    border-radius: 50px;
+    width: 80%;
+    height: 80px;
+    line-height: 85px;
+    text-align: center;
+    position: absolute;
+   top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 45px;
+    font-weight: lighter;
+    font-family: 'RixYeoljeongdo_Regular';
+    
+}
+
+.card2 {
+    width: 384px;
+    height: 626px;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    transform-style: preserve-3d;
+    perspective: 10000px;
+}
+
+.front-face2 {
+    height: 100%;
+    width: 100%;
+    background-image: url("../images/01.card/02.png");
+    background-size: cover;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    position: absolute;
+    transition: transform 0.2s cubic-bezier(0.4, 0.2, 0.2, 1);
+    border-radius: 45px;
+}
+
+
+
+.card3 {
+    width: 384px;
+    height: 626px;
+    /* top: 50%;
+    right: 0;
+    transform: translate(0, -50%); */
+    transform-style: preserve-3d;
+    perspective: 10000px;
+}
+
+.front-face3 {
+    height: 100%;
+    width: 100%;
+    background-image: url("../images/01.card/03.png");
+    background-size: cover;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    position: absolute;
+    transition: transform 0.2s cubic-bezier(0.4, 0.2, 0.2, 1);
+    border-radius: 45px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.card:hover>.back {
+    transform: rotateY(0deg);
+}
+
+.card:hover>.front {
+    transform: rotateY(-180deg);
+}
+
+
+.back {
+    transform: rotateY(180deg);
+}

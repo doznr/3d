@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+/* * {
+    padding: 0;
+    margin: 0;
+    bottom: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.search{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 55px;
+    background: rgb(16,141,190);
+    border-radius: 30px;
+    transition: 0.8s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+  
+}
+
+.search:hover{
+    width: 300px;
+
+}
+
+.search:hover i{
+   position: absolute;
+   right: 15px;
+   top: 12px;
+}
+.search:hover input{
+    display: block;
+    position: absolute;
+    background: transparent;
+    color: white;
+    font-size: larger;
+    top: 8px;
+    left: 20px;
+    width: 230px;
+    height: 32px;
+}
+
+input{
+    border: none;
+}
+
+.search input{
+    display: none;
+   
+}
+.search i{
+    color: white;
+    font-size: 22px;
+    
+}
+
+.searchTXT{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    font-size:15px;
+color: gray;
+}
+
+
+
+/*밑에 글자 호버*/
+
+
+.searchTXT>div{
+    cursor: pointer;
+    color: rgb(185, 185, 185);
+    padding-bottom: 20px;
+}
+
+
+/* 소셜 부분에 호버 했을 때 i는 호버가 안된다는 말 */
+.searchTXT>div .searchTXT>div>a:not(:hover){
+    opacity: 0.1;
+}
+
+
+.searchTXT>div>a:hover{
+    transform: translateY(-10px);
+    color: rgb(63, 63, 63);
+    font-weight: bolder;
+}
