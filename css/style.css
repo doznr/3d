@@ -178,7 +178,9 @@ button:hover {
     transform: translate(-15%, -30%);
 
 }
-
+#canvasWrap .text h5{
+    color: gray;
+}
 
 
 
